@@ -49,7 +49,10 @@
   <% end %>
 
   <% unless paypal %>
-    <%= submit_tag Spree.t(:save_and_continue), class: 'btn btn-lg btn-success primary new-braintree-payment-method braintree-submit', style: 'display: none;' %>
+    <%= button_tag class: 'continue button primary new-braintree-payment-method braintree-submit', style: 'display: none' do %>
+      <i class="fa payment-icon"></i>
+      Submit Order
+    <% end %>
   <% end %>
 </div>
 <hr/>
